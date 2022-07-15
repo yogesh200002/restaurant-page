@@ -1,0 +1,219 @@
+@font-face {
+    font-family: 'La Belle Aurore';
+    src: url('./assets/LaBelleAurore-Regular.ttf');
+    font-weight: 600;
+    font-style: normal;
+}
+
+:root{
+    font-family: 'La Belle Aurore';
+    position: relative;
+    min-height: 100%;
+}
+
+header{
+    margin-bottom: 50px;
+}
+
+#name{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 67px;
+    text-align: center;
+}
+
+.tabs{
+    display: flex;
+    background-color: #D9D9D9;
+    align-items: center;
+    height: 108px;
+    width: 100%;
+}
+
+.tab-name:hover{
+    transform: scale(1.02);
+    border-bottom: 2px solid black;
+    transition: all 0.5s;
+}
+
+.tab-name{
+    height: 108px;
+    width: 33.33%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 67px;
+    cursor: default;
+}
+
+#title{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 67px;
+    margin-bottom: 30px;
+}
+
+.home-content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 67px;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+#img-container{
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+    align-items: center;
+}
+
+#img-container > img{
+    width: 269px;
+    height: 202px;
+}
+
+footer{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #D9D9D9;
+}
+
+#menu-tab,.menu-card,.breakfast,.lunch,.dinner{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: 44px;
+}
+
+#menu-tab{
+    display: flex;
+    justify-content: space-around;
+}
+
+.menu-card{
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 20px;
+}
+
+.breakfast,.lunch{
+    border-spacing: 40px 10px;
+}
+
+tr > td{
+    width: 50%;
+}
+
+.dinner{
+    text-align: center;
+}
+
+#contact-container{
+    display: flex;
+}
+
+.contact-section{
+    display: flex;
+    gap: 15px;
+    flex-direction: column;
+    font-family: 'La Belle Aurore';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 36px;
+    line-height: 67px;
+    padding-left: 10%;
+}
+
+.contact-section,.map{
+    width: 50%;
+}
+
+.map > img{
+    height: 90%;
+    width: 90%;
+    object-fit: cover;
+}
+
+svg{
+    height: 50px;
+    width: 50px;
+}
+
+.contact-number,.mail-id{
+    display: flex;
+    gap: 10px;
+}
+
+#main,#menu-container,#contact-container{
+    animation: easeOut 500ms ;
+}
+
+@keyframes easeOut {
+    from {opacity: 0;}
+    to{opacity: 1;}
+}
+
+@media only screen and (max-width: 850px){
+    #img-container{
+        flex-direction: column;
+    }
+    #menu-tab{
+        display: none;
+    }
+    .menu-card{
+        flex-direction: column;
+        align-items: center;
+    }
+    .breakfast,.lunch,.dinner{
+        border-right: none;
+        border-bottom: 2px solid black;
+        width: 100%;
+        border-spacing: 0px 5px;
+    }
+    .breakfast::before{
+        content: 'Breakfast 7 am to 11 30 am';
+        text-align: center;
+        font-weight: bold;
+    }
+    .lunch::before{
+        text-align: center;
+        font-weight: bold;
+        content: 'Lunch 11 30 am to 4 pm';
+    }
+    .dinner::before{
+        font-weight: bold;
+        text-align: center;
+        content: 'Dinner 4 pm to 10 pm';
+    }
+    #contact-container{
+        flex-direction: column;
+    }
+    .map{
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: center;
+    }
+    .contact-section,.map{
+        width: auto;
+    }
+    .contact-section{
+        font-size: 20px;
+    }
+}
