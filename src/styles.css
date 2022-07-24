@@ -171,7 +171,7 @@ svg{
 }
 
 @media only screen and (max-width: 850px){
-    :root{
+    .tab-name, #title, .home-content, #menu-tab, .menu-card, .breakfast, .lunch, .dinner, #contact-container,.contact-section{
         font-size: 24px;
     }
     #img-container{
@@ -215,8 +215,5 @@ svg{
     }
     .contact-section,.map{
         width: auto;
-    }
-    .contact-section{
-        font-size: 20px;
     }
 }
