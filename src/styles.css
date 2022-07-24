@@ -171,6 +171,9 @@ svg{
 }
 
 @media only screen and (max-width: 850px){
+    :root{
+        font-size: 24px;
+    }
     #img-container{
         flex-direction: column;
     }
