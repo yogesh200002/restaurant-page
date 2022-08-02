@@ -138,7 +138,7 @@ tr > td{
     font-weight: 400;
     font-size: 36px;
     line-height: 67px;
-    padding-left: 10%;
+    padding-left: 6%;
 }
 
 .contact-section,.map{
@@ -159,6 +159,7 @@ svg{
 .contact-number,.mail-id{
     display: flex;
     gap: 10px;
+    align-items: center;
 }
 
 #main,#menu-container,#contact-container{
@@ -215,5 +216,9 @@ svg{
     }
     .contact-section,.map{
         width: auto;
+    }
+    .mail-id{
+        font-size: 20px;
+        flex-wrap: wrap;
     }
 }
